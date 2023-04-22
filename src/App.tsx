@@ -1,24 +1,15 @@
 import type { Component } from 'solid-js';
-
+import {createSignal} from 'solid-js';
 import logo from './logo.svg';
 import styles from './App.module.css';
+import Counter from './components/Counter';
 
-const Nested = ()=>{
-  return <h1>Nested</h1>
-}
 const App: Component = () => {
   return (
     <div class={styles.App}>
-      <Nested />
+      <Counter />
     </div>
   );
 };
 
 export default App;
-
-// React / Solid -> Component based archi
-/*
-   <Parent>
-     <Child1 />
-   </Parent>
-*/
