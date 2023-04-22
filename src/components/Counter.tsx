@@ -1,7 +1,11 @@
-import {createSignal} from 'solid-js';
+import {createSignal, createEffect} from 'solid-js';
 
 const Counter = ()=>{
     const [count, setCount] = createSignal(0);
+
+    createEffect(()=>{
+        console.log("Hello", count());
+    })
     return (
         <div>
             <button onClick={()=> setCount(count()+1)}>Increment</button>
